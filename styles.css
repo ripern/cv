@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100vh;
+  padding-top: 2rem;
+}
+
+body {
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #0f9b0f, #000000);
+  background: linear-gradient(to left, #0b7c0b, #000000);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: lightgray;
+  margin: 0 2rem;
+  font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+  font-size: 1.3rem;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+h1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  list-style-type: none;
+  margin-left: 0.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a[target='_blank'] {
+  color: darkorange;
+}
+
+a:hover {
+  color: lightgreen;
+}
+
+p,
+.box {
+  margin-bottom: 1.5rem;
+  line-height: 2rem;
+  background-color: #eeeeee10;
+  border-radius: 2%;
+  padding: 1rem;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 900px;
+  display: grid;
+  grid-template-areas:
+    'header-title'
+    'header-image'
+    'main'
+    'main'
+    'footer';
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-title {
+  grid-area: header-title;
+  text-align: center;
+}
+
+.header-image {
+  grid-area: header-image;
+  justify-self: center;
+}
+
+.education {
+  font-size: 1.2rem;
+}
+
+.profile-image {
+  transition: all 1.5s ease-in;
+  transform-origin: left top;
+  transform: rotate(-360deg);
+}
+
+.profile-image:hover {
+  transition: transform 0.4s;
+  transform: translate(-70px, 30px);
+}
+
+.container > nav {
+  grid-area: nav;
+}
+
+.container > main {
+  grid-area: main;
+}
+
+.container > footer {
+  grid-area: footer;
+}
+
+.occupation {
+  color: darkorange;
+}
+
+.experience {
+  margin-top: 32px;
+}
+
+.skills {
+  margin-top: 8px;
+}
+
+.skills > li {
+  line-height: 4rem;
+}
+
+.skill {
+  margin: 4px;
+  border-radius: 12px;
+  padding: 8px;
+  background-color: #333333;
+  display: inline;
+  font-weight: 600;
+}
+
+.skill:hover {
+  padding: 0.7rem;
+  transition: all 0.5s;
+  color: #333333;
+  background-color: darkorange;
+  transform: translate(120px, 20px);
+}
+
+.education {
+  line-height: 2.5rem;
+  font-size: 1.2rem;
+}
+
+.title::first-letter {
+  font-size: 3rem;
+}
+
+.subtitle {
+  font-size: 1.6rem;
+}
+
+.huge {
+  font-size: 3.5rem;
+}
+
+.icon-text {
+  margin-right: 0.5rem;
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    margin: 0 3rem;
+  }
+  .container {
+    grid-template-areas:
+      'header-title header-title header-image'
+      'main main main'
+      'footer footer footer';
+  }
+  .header-title {
+    text-align: left;
+  }
+  .header-image {
+    justify-self: flex-end;
+  }
+  .education {
+    font-size: inherit;
+  }
+}
